@@ -14,7 +14,6 @@ class TrashCollectionRobot:
         self.gamma = gamma  # Discount factor
         self.epsilon = epsilon  # Exploration rate
 
-        # Q-table initialization (state, action) -> Q-value
         # Possible actions: 0 (left), 1 (stay), 2 (right)
         self.q_table = {}
         for s in range(6):  # States 0 to 5
@@ -173,6 +172,6 @@ class TrashCollectionRobot:
                 print(f"Q(s{s}, a{a}): {self.q_table[(s, a)]:.2f}")
 
 
-# Example Usage
+
 robot = TrashCollectionRobot()
 robot.run_mdp(10)
